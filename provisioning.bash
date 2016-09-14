@@ -101,6 +101,7 @@ bundle exec rake db:migrate RAILS_ENV=production
 
 bundle exec rake assets:precompile RAILS_ENV=production
 
+/home/vagrant/4472-vagrant/scripts/updates.bash
 
 EOF
 
