@@ -1,7 +1,8 @@
 #!/bin/bash
 
 cd /var/www/tracks
-rm -rf *
+rm -rf /var/www/tracks/*
+rm -rf /var/www/tracks/.*
 echo Cloning tracks ...
 git clone -q https://github.com/TracksApp/tracks.git /var/www/tracks
 
