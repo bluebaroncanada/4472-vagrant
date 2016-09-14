@@ -31,6 +31,8 @@ After you've finished, you'll be able to SSH in by setting the port to 2222 and 
 
 The default password is `vagrant`.
 
+## Starting the server
+
 To start the Tracks server, once sshed in, `/home/vagrant/4472-vagrant/scripts/start-tracks.bash`
 
 The server will start on port `3000`.  To access the server, simply open a browser on your host (local machine) and browse to `http://192.168.34.10:3000`.
