@@ -31,6 +31,9 @@ After you've finished, you'll be able to SSH in by setting the port to 2222 and 
 
 The default password is `vagrant`.
 
+### Special note
+A couple times while doing this installation the installation stalled at `Cloning Tracks ...`.  If that happens for more than 10 minutes, just `ctrl+c` to break out, ssh in, and run `/home/vagrant/4472-vagrant/scripts/reinstall-tracks.bash`
+
 ## Starting the server
 
 To start the Tracks server, once sshed in, `/home/vagrant/4472-vagrant/scripts/start-tracks.bash`
