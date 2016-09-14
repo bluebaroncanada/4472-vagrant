@@ -1,5 +1,16 @@
 #!/bin/bash
 
+ssh_public_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDZC0wINCffUgIYbD7RznR1dMV4bTbkzW5JWp7bsTNWZNTUGiXt9nKl7Q+fE8ChpnqsLfQg4NtzxkMxFEOZI3qa/6dLlqlIq5UwdB/lF0YO7FMgn5sfJs2+/pvs2Ytx6niH4coLB8NZW5SiV9MWj3ECOOVWTtVyrU37/ANzCr+i+tU8g7H2+DxADXUcYWxwbv2tL1TF89BEaRaVQlz1oJNi54i+E/aggyw65WfoVDWQEXWO+SjiTm9Ide1RxHE0pDUKLoxTvsUZpR2PWRq0LCrzljfzfYl3RloCIelwy+pFgO8KlDgPvgnJs8iP6wmsMw5RyF5y3fhYWdET/h377jl"
+
+if [ -n "$ssh_public_key" ]; then
+	cat >> /home/vagrant/.ssh/authorized_keys2 << EOF
+	$ssh_public_key
+EOF
+	 
+	chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys2
+	chmod 700 /home/vagrant/.ssh/authorized_keys2
+fi
+
 sudo -s
 
 #Makes it so you don't have to type in your password when running sudo
@@ -26,6 +37,15 @@ chmod 770 /var/www/tracks
 chmod 770 /var/www
 
 exec sudo -i -u vagrant /bin/bash - << EOF
+
+
+cd ~
+git clone -q https://github.com/bluebaroncanada/4472-vagrant.git
+
+cd ~/4472-vagrant/scripts
+chmod +x *.bash
+~/4472-vagrant/scripts/updates.bash
+
 
 cd ~
 wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz
@@ -80,6 +100,8 @@ bundle install --without development test sqlite
 bundle exec rake db:migrate RAILS_ENV=production
 
 bundle exec rake assets:precompile RAILS_ENV=production
+
+
 EOF
 
 
