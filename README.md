@@ -7,6 +7,9 @@ Before you begin you should get a private and public key.  I can't stress to you
 - Mac/Linux: I'll post explicit instructions for Linux if there's a need, but if you just look up how to generate an ssh key and create an ssh config file, you'll be fine.
 
 ## Installation
+
+*** Make sure you are connected to the Internet during this process.  If you get disconnected, you'll likely have to `vagrant destroy; vagrant up` which will take you another 20 minutes. ***
+
 - Download vagrant from https://www.vagrantup.com/downloads.html
 I think it comes with virtualbox, but if it doesn't https://www.virtualbox.org/wiki/Downloads
 
