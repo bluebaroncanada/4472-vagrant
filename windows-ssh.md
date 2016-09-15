@@ -4,7 +4,7 @@ Go to http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html and downlo
 
 
 - Open `puttygen`.  Click `Generate` and move your mouse around until the bar gets full.
-- Save both your public and private key WITHOUT a passphrase.  Copy the text of the Public key and after you've cloned this projectect, edit the `provisioning.bash` script, remove the new line character, and paste it all in one line where it says `ssh_public_key`.
+- Save both your public and private key WITHOUT a passphrase.  Copy the text of the Public key and after you've cloned this project, edit the `provisioning.bash` script, remove the new line character, and paste it all in one line where it says `ssh_public_key`.
 
 It should look like:
 
