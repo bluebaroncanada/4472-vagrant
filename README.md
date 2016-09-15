@@ -1,12 +1,15 @@
 # 4472-vagrant
 
 ## Optional
-Before you begin you should get a private and public key.  I can't stress to you how much easier your life will be.
+Before you begin you should get a private and public key.  I can't stress to you how much easier your life will be.  If you're going to do this, now's the time.  After you've run `vagrant up`, it's too late; you'll have to do it manually.
 
 - Windows: https://github.com/bluebaroncanada/4472-vagrant/blob/master/windows-ssh.md
 - Mac/Linux: I'll post explicit instructions for Linux if there's a need, but if you just look up how to generate an ssh key and create an ssh config file, you'll be fine.
 
 ## Installation
+
+*** Make sure you are connected to the Internet during this process.  If you get disconnected, you'll likely have to `vagrant destroy; vagrant up` which will take you another 20 minutes. ***
+
 - Download vagrant from https://www.vagrantup.com/downloads.html
 I think it comes with virtualbox, but if it doesn't https://www.virtualbox.org/wiki/Downloads
 
