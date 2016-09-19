@@ -4,7 +4,7 @@ cd /var/www/tracks
 rm -rf /var/www/tracks/*
 rm -rf /var/www/tracks/.*
 echo Cloning tracks ...
-git clone -q https://github.com/TracksApp/tracks.git /var/www/tracks
+git clone https://github.com/TracksApp/tracks.git /var/www/tracks
 
 
 cp /var/www/tracks/config/site.yml.tmpl /var/www/tracks/config/site.yml
@@ -18,3 +18,5 @@ bundle install --without development test sqlite
 bundle exec rake db:migrate RAILS_ENV=production
 
 bundle exec rake assets:precompile RAILS_ENV=production
+
+
